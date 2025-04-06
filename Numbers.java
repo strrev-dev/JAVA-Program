@@ -4,7 +4,7 @@ public class Numbers {
     public static void main(String[] args) {
         int num1, num2, sum;
         double average;
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
         System.out.println("Enter first number:");
         num1 = sc.nextInt();
         System.out.println(  "Enter second number:");
@@ -14,5 +14,6 @@ public class Numbers {
         System.out.println("Sum: " + sum);
         System.out.println("Average: " + average);
         sc.close();
+        }
     }
 }
